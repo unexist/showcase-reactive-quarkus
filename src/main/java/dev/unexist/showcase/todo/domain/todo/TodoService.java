@@ -6,7 +6,7 @@
  * @version $Id$
  *
  * This program can be distributed under the terms of the GNU GPLv2.
- * See the file COPYING for details.
+ * See the file LICENSE for details.
  **/
 
 package dev.unexist.showcase.todo.domain.todo;
@@ -96,4 +96,21 @@ public class TodoService {
     public Optional<Todo> findById(int id) {
         return this.todoRepository.findById(id);
     }
+
+    /**
+     * Find {@link Todo} by given id
+     *
+     * @param id
+     *          Id to look for
+     * @return
+     *          A {@link Optional} of the entry
+     **/
+
+    /*public Uni<Todo> findAsyncById(int id) {
+        return Uni.createFrom()
+                .nothing()
+                .onItem()
+                .transform(heh -> this.todoRepository.findById(id).get())
+                .on
+    }*/
 }

@@ -6,7 +6,7 @@
  * @version $Id$
  *
  * This program can be distributed under the terms of the GNU GPLv2.
- * See the file COPYING for details.
+ * See the file LICENSE for details.
  **/
 
 package dev.unexist.showcase.todo.domain.todo;
@@ -65,7 +65,7 @@ public class TodoRepository {
             this.list.set(todo.getId(), todo);
 
             ret = true;
-        } catch(IndexOutOfBoundsException e) {
+        } catch (IndexOutOfBoundsException e) {
             LOGGER.warn("update: id={} not found", todo.getId());
         }
 
@@ -114,7 +114,7 @@ public class TodoRepository {
      *          A {@link Optional} with the result of the lookup
      **/
 
-    public Optional<Todo> findById(int id ) {
+    public Optional<Todo> findById(int id) {
         return this.list.stream()
                 .filter(t -> t.getId() == id)
                 .findFirst();

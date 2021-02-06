@@ -6,7 +6,7 @@
  * @version $Id$
  *
  * This program can be distributed under the terms of the GNU GPLv2.
- * See the file COPYING for details.
+ * See the file LICENSE for details.
  **/
 
 package dev.unexist.showcase.todo.domain.todo;
@@ -57,7 +57,7 @@ public class TodoBase {
     public void setDueDate(DueDate dueDate) {
         this.dueDate = dueDate;
 
-        if (null != dueDate.getStart() && null != dueDate.getDue()){
+        if (null != dueDate.getStart() && null != dueDate.getDue()) {
             this.done = dueDate.getStart().isBefore(dueDate.getDue());
         }
     }
