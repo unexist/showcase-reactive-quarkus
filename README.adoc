@@ -1,0 +1,3 @@
+= Showcase for reactive messaging based on quarkus
+
+This project holds a showcase for reactive.
